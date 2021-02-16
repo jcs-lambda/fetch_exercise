@@ -94,8 +94,6 @@ def dot_product(tf1, tf2):
             sum = sum + (tf1[k1] * tf2[k1])
     return sum
 
-# def vector_angle(tf1, tf2):
-
 
 def cosine_similarity(tf1, tf2):
     """
@@ -143,8 +141,6 @@ def similarity(d1, d2):
     v2 = [vocab.index(token) for token in d2]
 
     # calculate token frequency
-    # single tokens gives best results on sample documents
-    # tested sequences from 1 to 5 length
     seq_length = 1
     f1 = frequency(v1, seq_length)
     f2 = frequency(v2, seq_length)
@@ -153,6 +149,15 @@ def similarity(d1, d2):
 
 
 def load_doc(filename) -> str:
+    """
+    Opens a file and reads it in as a string.
+
+    Parameters:
+    filename (str): Path to file
+
+    Returns:
+    str: contents of file
+    """
     with open(filename, 'r') as f:
         doc = f.read()
     return doc
