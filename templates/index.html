@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Document Similarity</title>
+    </head>
+    <body>
+        <h1>Document Similarity</h1>
+        <p>Enter two documents then press "Process" to calculate their
+        cosine similarity.</p>
+        <form action="/" method="POST">
+            <textarea name="doc1" rows="5" cols="80" placeholder="Document 1">{% if doc1 %}{{ doc1 }}{% endif %}</textarea><br>
+            <textarea name="doc2" rows="5" cols="80" placeholder="Document 2">{% if doc2 %}{{ doc2 }}{% endif %}</textarea><br>
+            <input type="submit" value="Process">
+        </form>
+        {% if similarity %}
+        <h3>Document similarity: {{ similarity }}</h3>
+        {% endif %}
+    </body>
+</html>
