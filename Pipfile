@@ -8,6 +8,7 @@ flake8 = "*"
 ipykernel = "*"
 ipywidgets = "*"
 pylint = "*"
+autopep8 = "*"
 
 [packages]
 
