@@ -7,3 +7,21 @@ You can [run the notebook in Google Colab](https://colab.research.google.com/git
 
 If filenames are not provided on the command line, the program will prompt
 the user to type in each document.
+
+To run the web app locally (in repo root):
+```
+pipenv install
+pipenv shell
+
+# bash
+export FLASK_APP=similarity_app.py
+flask run
+
+# Windows CMD
+set FLASK_APP=similarity_app.py
+flask run
+
+# Windows Powershell
+$env:FLASK_APP = "similarity_app.py"
+flask run
+```
