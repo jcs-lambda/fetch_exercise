@@ -1,7 +1,7 @@
 # fetch_exercise
  Python app to determine the similarity of two texts.
 
-You can [run the notebook in Google Colab](https://colab.research.google.com/github/jcs-lambda/fetch_exercise/blob/main/similarity.ipynb) or clone this repository to run from the command line.
+You can [run the notebook in Google Colab](https://colab.research.google.com/github/jcs-lambda/fetch_exercise/blob/main/similarity.ipynb), test the [web app on Heroku](https://doc-sim.herokuapp.com/), or clone this repository to run from the command line.
 
 ```python similarity.py [filename] [filename]```
 
@@ -24,4 +24,11 @@ flask run
 # Windows Powershell
 $env:FLASK_APP = "similarity_app.py"
 flask run
+```
+
+Deploy to Heroku:
+```
+heroku login
+heroku create <your app name here>
+git push heroku main
 ```
